@@ -44,7 +44,7 @@ public class GradeImpl extends ServiceImpl<GradeDao, Grade> implements GradeServ
 //         }
         subjectList.forEach((s)=>{
             map.put(s.getCode(), s.getName());
-        })
+        });
     }
 
     @Override
