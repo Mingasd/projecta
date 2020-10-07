@@ -39,9 +39,12 @@ public class GradeImpl extends ServiceImpl<GradeDao, Grade> implements GradeServ
             return;
         map = new HashMap<>();
         List<Subject> subjectList = subjectDao.selectList(null);
-        for (Subject s:subjectList){
+//         for (Subject s:subjectList){
+//             map.put(s.getCode(), s.getName());
+//         }
+        subjectList.forEach((s)=>{
             map.put(s.getCode(), s.getName());
-        }
+        })
     }
 
     @Override
